@@ -2172,30 +2172,42 @@ let result = 0;
   return result;
 }
 
-//Task_118 "Count of positives / sum of negatives"
-//Given an array of integers.
-//Return an array, where the first element is the count of positives numbers and the second element is sum of negative //numbers. 0 is neither positive nor negative.
-//If the input is an empty array or is null, return an empty array.
-//Example
-//For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
+// 118. Cat years, Dog year
+===========================
+I have a cat and a dog.
+I got them at the same time as kitten/puppy. That was humanYears years ago.
+Return their respective ages now as [humanYears,catYears,dogYears]
 
+NOTES:
+humanYears >= 1
+humanYears are whole numbers only
 
-function countPositivesSumNegatives(input) {
-  let countPositives = 0;
-  let sumNegatives = 0;
-  if (input == null || input.length == 0) {
-    return [];
+Cat Years:
+15 cat years for first year
++9 cat years for second year
++4 cat years for each year after that
+
+Dog Years:
+15 dog years for first year
++9 dog years for second year
++5 dog years for each year after that
+
+SOLUTION:
+=======================================================
+var humanYearsCatYearsDogYears = function(humanYears) {
+  let catYears = 0;
+  let dogYears = 0;
+  if (humanYears == 1) {
+    catYears += 15;
+    dogYears += 15;
   }
-  
-  for (let i of input) {
-    if (i > 0) {
-      countPositives += 1;
-    }
-    else {
-      sumNegatives += i;
-    }
+  else if (humanYears == 2) {
+    catYears += 15 + 9;
+    dogYears += 15 + 9;
+  } else {
+    catYears += (15 + 9 + (humanYears-2) * 4);
+    dogYears += (15 + 9 + (humanYears-2) * 5);
   }
-    return [countPositives, sumNegatives];
- }
- 
- 
+  return [humanYears, catYears, dogYears];
+}
+
