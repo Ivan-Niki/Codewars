@@ -2172,7 +2172,7 @@ let result = 0;
   return result;
 }
 
-// Task_118. Cat years, Dog year
+// Task_118. Cat years, Dog year.
 ===========================
 I have a cat and a dog.
 I got them at the same time as kitten/puppy. That was humanYears years ago.
@@ -2211,7 +2211,7 @@ var humanYearsCatYearsDogYears = function(humanYears) {
   return [humanYears, catYears, dogYears];
 }
 
-// Task_119. "Count of positives / sum of negatives"
+// Task_119. "Count of positives / sum of negatives".
 //Given an array of integers.
 //Return an array, where the first element is the count of positives numbers and the second element is sum of negative //numbers. 0 is neither positive nor negative.
 //If the input is an empty array or is null, return an empty array.
@@ -2237,7 +2237,7 @@ function countPositivesSumNegatives(input) {
     return [countPositives, sumNegatives];
  }
  
- // 120. Sort and Star
+ // 120. Sort and Star.
 //You will be given a list of strings. You must sort it alphabetically (case-sensitive, and based on the ASCII values //of the chars) and then return the first value.
 //The returned value must be a string, and have "***" between each of its letters.
 //You should not remove or add elements from/to the array.
