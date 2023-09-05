@@ -2259,3 +2259,34 @@ function repeatStr (n, s) {
   return s.repeat(n);
 }
 
+// 122. Create a function that accepts a string and a single character, and returns an integer of the count of //occurrences the 2nd argument is found in the first one.
+//If no occurrences can be found, a count of 0 should be returned.
+//("Hello", "o")  ==>  1
+//("Hello", "l")  ==>  2
+//("", "z")       ==>  0
+
+function strCount(str, letter){  
+  let count = 0;
+   if (str.length == 0) {
+     count +=0;
+  } else {
+    for (let i of str) {
+      if (i == letter) {
+        count+=1;
+      }
+    }
+  }
+  return count
+}
+
+// 2nd version:
+function strCount(str, letter){  
+  let count = 0;
+ 
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == letter)
+      count++;
+  }
+  return count;
+}
+
