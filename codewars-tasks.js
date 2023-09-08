@@ -2359,6 +2359,20 @@ function fakeBin(x){
 }
 
 // 2nd version:
+function fakeBin(x){
+  return x.replace( /[0-4]/g, "0" ).replace( /[5-9]/g, "1" )
+}
+
+// 3rd version:
 function fakeBin(x) {
     return x.split('').map(n => n < 5 ? 0 : 1).join('');
+}
+
+// 4th version:
+function fakeBin(x){
+  let result = '';
+  for(let i = 0; i < x.length; i++){
+    x[i] < 5 ? result += 0 : result += 1;
+  }
+  return result;
 }
