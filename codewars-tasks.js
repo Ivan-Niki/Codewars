@@ -2400,3 +2400,16 @@ function isPalindrome(x) {
  }
   else return false
 }
+
+// 2nd version:
+const isPalindrome = (x) => {
+  return x.split("").reverse().join("").toLowerCase() === x.toLowerCase() ? true : false
+}
+
+// 3rd version:
+const isPalindrome = x => x.toLowerCase().split('').reverse().join('') == x.toLowerCase();
+
+// OR
+function isPalindrome(x) {
+  return x.toLowerCase().split('').reverse().join('') == x.toLowerCase()
+}
