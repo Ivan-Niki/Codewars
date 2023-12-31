@@ -2391,3 +2391,12 @@ function correct(string) {
   return resultStr.replace(/0/g, "O").replace(/5/g, "S").replace(/1/g, "I")
 }
 
+// 128. Write a function that checks if a given string (case insensitive) is a palindrome.
+// A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards as forwards, such as madam or racecar.
+function isPalindrome(x) {
+  let reverseString = x.split("").reverse().join("");
+  if (x.toLowerCase() == reverseString.toLowerCase()) {
+    return true;
+ }
+  else return false
+}
